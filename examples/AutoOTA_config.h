@@ -38,7 +38,6 @@ const char * password = "wifi_password";
 
 const int port = 443;
 String host = "raw.githubusercontent.com";
-https://raw.githubusercontent.com/e-tinkers/AutoOTA/master/fw_version.txt
 String sketchVersionFile = "//e-tinkers/AutoOTA/master/fw_version.txt";
 String sketchBinaryFile = "/e-tinkers/AutoOTA/master/fireware.bin";
 #endif
