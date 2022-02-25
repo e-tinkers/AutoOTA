@@ -25,7 +25,7 @@ int AutoOTA::_parseHeader(String header, String unwantedPart) {
 int AutoOTA::begin(String host, int port) {
   _host = host;
   _port = port;
-  Serial.printf("Connecting to server %s... ", _host);
+  Serial.printf("Connecting to server %s... ", _host.c_str());
   return _client.connect(_host.c_str(), (const int) _port);
 }
 
@@ -52,7 +52,7 @@ int AutoOTA::available(String latestVersion, String currentVersion) {
   }
   Serial.println(payload);
   payload.trim();
-  Serial.printf("Latest Version on Server %s\n", payload);
+  Serial.printf("Latest Version on Server %s\n", payload.c_str());
 
   if (payload == currentVersion) return 0;
 
